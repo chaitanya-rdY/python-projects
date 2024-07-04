@@ -1,2 +1,2 @@
-i="2acdsd"
-print(i.isalnum())
+f=open("demo.txt","rb")
+print(f.read())
