@@ -4,15 +4,15 @@ with open("story.txt","r") as file:
     story=file.read()
 start_of_word="<"
 end_of_word=">"
-words=[]
+words=set()
 for i,char in enumerate(story):
     if(char=="<"):
         start=i
     elif(char==">"):
         if(story[i-1].isalpha() or story[i-1]!="<"):
             word=story[start:i+1]
-            words.append(word)
-print(len(words))
+            words.add(word)
+print(words)
 answers={}
 print("please enter the inputs according to given hints")
 for word in words:
